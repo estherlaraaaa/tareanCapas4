@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Ingreso de productos</title>
 </head>
 <body>
 	<h1>Formulario de ingreso de productos</h1>
-	<form th:action="@{/facturar}" th:object="${product}" method="post" >
+	<form th:action="@{/facturar}" th:object="${producto}" method="post" >
 	
 		<label>Código: <input type="text" th:field="*{codigo}"></label><br>
 		<span th:errors="*{codigo}" style="color: #FF0000"></span><br>

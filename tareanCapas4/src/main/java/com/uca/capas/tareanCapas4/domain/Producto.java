@@ -6,7 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class Product {
+public class Producto {
 	
 	@Size(min=12, max=12, message = "El código debe contener 12 dígitos.")
 	@NotEmpty(message = "Este campo no puede ir vacio, ingrese un código")
@@ -33,10 +33,10 @@ public class Product {
 	@NotEmpty(message = "Este campo no puede ir vacio, ingrese una fecha")
 	private String fechaIngreso;
 
-	public Product() {	
+	public Producto() {	
 	}
 	
-	public Product(String codigo, String nombre, String marca, String descripcion, String existencias, String fechaIngreso) {
+	public Producto(String codigo, String nombre, String marca, String descripcion, String existencias, String fechaIngreso) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.marca = marca;

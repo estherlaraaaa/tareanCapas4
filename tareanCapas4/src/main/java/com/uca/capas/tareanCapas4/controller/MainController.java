@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.uca.capas.tareanCapas4.domain.Product;
+import com.uca.capas.tareanCapas4.domain.Producto;
 
 @Controller
 public class MainController {
@@ -16,13 +16,13 @@ public class MainController {
 	@RequestMapping("/producto")
 	public ModelAndView product() {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("producto", new Product());
+		mav.addObject("producto", new Producto());
 		mav.setViewName("producto");
 		return mav;
 	}
 	
 	@RequestMapping("/facturar")
-	public ModelAndView facturar(@Valid @ModelAttribute Product producto, BindingResult respuesta) {
+	public ModelAndView facturar(@Valid @ModelAttribute Producto producto, BindingResult respuesta) {
 		ModelAndView mav = new ModelAndView();
 		
 		if(respuesta.hasErrors()) {
