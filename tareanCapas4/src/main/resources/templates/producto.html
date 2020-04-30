@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ingreso de productos</title>
+</head>
+<body>
+	<h1>Formulario de ingreso de productos</h1>
+	<form th:action="@{/facturar}" th:object="${product}" method="post" >
+	
+		<label>Código: <input type="text" th:field="*{codigo}"></label><br>
+		<span th:errors="*{codigo}" style="color: #FF0000"></span><br>
+		
+		<label>Nombre: <input type="text" th:field="*{nombre}"></label><br>
+		<span th:errors="*{nombre}" style="color: #FF0000"></span><br>
+		
+		<label>Marca: <input type="text" th:field="*{marca}"></label><br>
+		<span th:errors="*{marca}" style="color: #FF0000"></span><br>
+		
+		<label>Descripción: <input type="text" th:field="*{descripcion}"></label><br>
+		<span th:errors="*{descripcion}" style="color: #FF0000"></span><br>
+		
+		<label>Existencias: <input type="text" th:field="*{existencias}"></label><br>
+		<span th:errors="*{existencias}" style="color: #FF0000"></span><br>
+		
+		<label>Fecha de ingreso: <input type="text" th:field="*{fechaIngreso}"></label><br>
+		<span th:errors="*{fechaIngreso}" style="color: #FF0000"></span><br>
+		
+		<input type="submit" value="Guardar Producto">
+	</form>
+</body>
+</html>
